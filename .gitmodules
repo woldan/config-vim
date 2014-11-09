@@ -52,3 +52,6 @@
 [submodule "bundle/vim-dash"]
 	path = bundle/vim-dash
 	url = https://github.com/rizzatti/dash.vim.git
+[submodule "bundle/vim-dispatch"]
+	path = bundle/vim-dispatch
+	url = https://github.com/tpope/vim-dispatch
