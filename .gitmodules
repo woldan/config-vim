@@ -7,9 +7,6 @@
 [submodule "bundle/vim-fugitive"]
 	path = bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule "bundle/vim-tbone"]
-	path = bundle/vim-tbone
-	url = https://github.com/tpope/vim-tbone.git
 [submodule "bundle/vim-commentary"]
 	path = bundle/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
@@ -55,3 +52,18 @@
 [submodule "bundle/vim-dispatch"]
 	path = bundle/vim-dispatch
 	url = https://github.com/tpope/vim-dispatch
+[submodule "bundle/vimux"]
+	path = bundle/vimux
+	url = https://github.com/benmills/vimux
+[submodule "bundle/vim-latex-box"]
+	path = bundle/vim-latex-box
+	url = https://github.com/LaTeX-Box-Team/LaTeX-Box.git
+[submodule "bundle/vimix"]
+	path = bundle/vimix
+	url = https://github.com/spiegela/vimix.git
+[submodule "bundle/vim-clojure"]
+	path = bundle/vim-clojure
+	url = https://github.com/vim-scripts/VimClojure.git
+[submodule "bundle/vim-syntastic"]
+	path = bundle/vim-syntastic
+	url = https://github.com/scrooloose/syntastic
