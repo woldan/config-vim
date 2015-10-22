@@ -67,3 +67,6 @@
 [submodule "bundle/vim-tagbar"]
 	path = bundle/vim-tagbar
 	url = https://github.com/majutsushi/tagbar
+[submodule "bundle/vim-undotree"]
+	path = bundle/vim-undotree
+	url = https://github.com/mbbill/undotree.git
