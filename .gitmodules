@@ -63,7 +63,16 @@
 	url = https://github.com/vim-scripts/VimClojure.git
 [submodule "bundle/vim-syntastic"]
 	path = bundle/vim-syntastic
-	url = https://github.com/scrooloose/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule "bundle/vim-ags"]
+	path = bundle/vim-ags
+	url = https://github.com/gabesoft/vim-ags
 [submodule "bundle/vim-ycm"]
 	path = bundle/vim-ycm
-	url = https://github.com/Valloric/YouCompleteMe.git
+	url = https://github.com/Valloric/YouCompleteMe
+[submodule "bundle/vim-tagbar"]
+	path = bundle/vim-tagbar
+	url = https://github.com/majutsushi/tagbar
+[submodule "bundle/vim-undotree"]
+	path = bundle/vim-undotree
+	url = https://github.com/mbbill/undotree.git
