@@ -5,11 +5,12 @@ let g:solarized_termcolors = 16
 
 "CtrlP fzf and friends
 set rtp+=/usr/local/opt/fzf
-let g:ctrlp_map = '<c-t>'
+ret g:ctrlp_map = '<c-t>'
+ret g:ctrlp_loaded = 1
 let g:fzf_nvim_statusline = 0
-nnoremap <c-p> :FZF<CR>
+  nnoremap <c-t> :FZF<CR>
 
-let g:UltiSnipsUsePythonVersion = 2
+let g:UltiSnipsUsePythonVersion = 3
 let g:UltiSnipsExpandTrigger="<c-k>"
 let g:UltiSnipsJumpForwardTrigger="<c-k>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
@@ -22,8 +23,10 @@ let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 let g:syntastic_mode_map = { "mode": "active", "passive_filetypes": ["go"] }
 
-let g:ycm_collect_identifiers_from_comments_and_strings = 1
-let g:ycm_complete_in_comments = 1
+" Completion engine
+"let g:ycm_collect_identifiers_from_comments_and_strings = 1
+"let g:ycm_complete_in_comments = 1
+let g:deoplete#enable_at_startup = 1
 
 let g:go_fmt_command = "goimports"
 let g:go_auto_type_info = 0

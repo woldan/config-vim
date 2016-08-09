@@ -61,9 +61,6 @@
 [submodule "bundle/vim-ags"]
 	path = bundle/vim-ags
 	url = https://github.com/gabesoft/vim-ags
-[submodule "bundle/vim-ycm"]
-	path = bundle/vim-ycm
-	url = https://github.com/Valloric/YouCompleteMe
 [submodule "bundle/vim-tagbar"]
 	path = bundle/vim-tagbar
 	url = https://github.com/majutsushi/tagbar
@@ -73,3 +70,6 @@
 [submodule "bundle/vim-airline-themes"]
 	path = bundle/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes
+[submodule "bundle/vim-deoplete"]
+	path = bundle/vim-deoplete
+	url = https://github.com/Shougo/deoplete.nvim
