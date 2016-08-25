@@ -73,3 +73,12 @@
 [submodule "bundle/vim-deoplete"]
 	path = bundle/vim-deoplete
 	url = https://github.com/Shougo/deoplete.nvim
+[submodule "bundle/vim-erlang-runtime"]
+	path = bundle/vim-erlang-runtime
+	url = https://github.com/vim-erlang/vim-erlang-runtime
+[submodule "bundle/vim-erlang-omnicomplete"]
+	path = bundle/vim-erlang-omnicomplete
+	url = https://github.com/vim-erlang/vim-erlang-omnicomplete
+[submodule "bundle/vim-fzf"]
+	path = bundle/vim-fzf
+	url = https://github.com/junegunn/fzf.vim

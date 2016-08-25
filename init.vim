@@ -7,8 +7,9 @@ let g:solarized_termcolors = 16
 set rtp+=/usr/local/opt/fzf
 ret g:ctrlp_map = '<c-t>'
 ret g:ctrlp_loaded = 1
-let g:fzf_nvim_statusline = 0
-  nnoremap <c-t> :FZF<CR>
+"let g:fzf_nvim_statusline = 0
+nnoremap <c-t> :FZF<CR>
+let g:fzf_history_dir = '~/.fzf-history'
 
 let g:UltiSnipsUsePythonVersion = 3
 let g:UltiSnipsExpandTrigger="<c-k>"
