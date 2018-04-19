@@ -5,9 +5,7 @@ let g:solarized_termcolors = 16
 
 "CtrlP fzf and friends
 set rtp+=/usr/local/opt/fzf
-ret g:ctrlp_map = '<c-t>'
-ret g:ctrlp_loaded = 1
-"let g:fzf_nvim_statusline = 0
+let g:fzf_nvim_statusline = 1
 nnoremap <c-t> :FZF<CR>
 let g:fzf_history_dir = '~/.fzf-history'
 
@@ -32,12 +30,48 @@ let g:deoplete#enable_at_startup = 1
 let g:go_fmt_command = "goimports"
 let g:go_auto_type_info = 0
 let g:go_term_mode = "split"
-let g:go_term_enabled = 1
+"let g:go_term_enabled = 1
+let g:go_list_type = 'quickfix'
 
-source ~/.vim/bundle/vim-pathogen/autoload/pathogen.vim
-execute pathogen#infect()
+"source ~/.vim/bundle/vim-pathogen/autoload/pathogen.vim
+"execute pathogen#infect()
+if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
+  silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+call plug#begin()
+" - lang
+Plug 'SirVer/ultisnips'
+Plug 'fatih/vim-go'
+Plug 'tpope/vim-endwise'
+Plug 'elixir-lang/vim-elixir'
+Plug 'vim-erlang/vim-erlang-omnicomplete'
+Plug 'herringtondarkholme/yats.vim'
+" - edit
+Plug 'godlygeek/tabular'
+Plug 'andrewradev/splitjoin.vim'
+" - search
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'gabesoft/vim-ags'
+Plug 'mileszs/ack.vim'
+" - presentation
+Plug 'lifepillar/vim-solarized8'
+Plug 'altercation/vim-colors-solarized'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+" - completion
+Plug 'shougo/deoplete.nvim'
+" - tools
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'mbbill/undotree'
+call plug#end()
+
 syntax enable
 filetype plugin indent on
+set cursorline
+:hi CursorLine cterm=NONE ctermbg=darkblue ctermfg=white guibg=darkblue ctermfg=white
 set background=dark
 colorscheme solarized
 
