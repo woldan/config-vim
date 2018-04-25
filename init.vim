@@ -1,7 +1,6 @@
 let g:python_host_prog = '/usr/local/bin/python2'
 
 let g:airline_theme = "solarized"
-let g:solarized_termcolors = 16
 
 "CtrlP fzf and friends
 set rtp+=/usr/local/opt/fzf
@@ -54,7 +53,8 @@ Plug 'andrewradev/splitjoin.vim'
 " - search
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'gabesoft/vim-ags'
-Plug 'mileszs/ack.vim'
+Plug 'rking/ag.vim'
+Plug 'rizzatti/dash.vim'
 " - presentation
 Plug 'lifepillar/vim-solarized8'
 Plug 'altercation/vim-colors-solarized'
@@ -89,4 +89,4 @@ set hlsearch
 
 set completeopt-=preview
 
-:nmap <silent> <F1> <Plug>DashSearch
+:nmap <silent> <F1> <Plug>Dash
