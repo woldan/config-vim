@@ -1,25 +1,26 @@
-let g:python_host_prog = '/usr/local/bin/python2'
+let g:python3_host_prog = '/usr/local/bin/python3'
 
 let g:airline_theme = "solarized"
+let g:airline#extensions#ale#enabled = 1
 
 "CtrlP fzf and friends
 set rtp+=/usr/local/opt/fzf
 let g:fzf_nvim_statusline = 1
-nnoremap <c-t> :FZF<CR>
+nnoremap <c-p> :FZF<CR>
 let g:fzf_history_dir = '~/.fzf-history'
 
-let g:UltiSnipsUsePythonVersion = 3
+"let g:UltiSnipsUsePythonVersion = 3
 let g:UltiSnipsExpandTrigger="<c-k>"
 let g:UltiSnipsJumpForwardTrigger="<c-k>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 "let g:syntastic_always_populate_loc_list = 1
 "let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['jshint']
-let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
-let g:syntastic_mode_map = { "mode": "active", "passive_filetypes": ["go"] }
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+"let g:syntastic_javascript_checkers = ['jshint']
+"let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+"let g:syntastic_mode_map = { "mode": "active", "passive_filetypes": ["go"] }
 
 " Completion engine
 "let g:ycm_collect_identifiers_from_comments_and_strings = 1
@@ -31,6 +32,8 @@ let g:go_auto_type_info = 0
 let g:go_term_mode = "split"
 "let g:go_term_enabled = 1
 let g:go_list_type = 'quickfix'
+let g:go_build_tags = 'smoke slow'
+let g:go_def_mode = 'godef' "until guru becomes reasonable fast
 
 "source ~/.vim/bundle/vim-pathogen/autoload/pathogen.vim
 "execute pathogen#infect()
@@ -47,6 +50,7 @@ Plug 'tpope/vim-endwise'
 Plug 'elixir-lang/vim-elixir'
 Plug 'vim-erlang/vim-erlang-omnicomplete'
 Plug 'herringtondarkholme/yats.vim'
+Plug 'w0rp/ale'
 " - edit
 Plug 'godlygeek/tabular'
 Plug 'andrewradev/splitjoin.vim'
@@ -55,6 +59,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'gabesoft/vim-ags'
 Plug 'rking/ag.vim'
 Plug 'rizzatti/dash.vim'
+Plug 'mattn/vim-fz'
 " - presentation
 Plug 'lifepillar/vim-solarized8'
 Plug 'altercation/vim-colors-solarized'
@@ -82,6 +87,8 @@ set expandtab
 set sw=2
 
 set nu
+
+set undofile
 
 set ignorecase
 set smartcase
