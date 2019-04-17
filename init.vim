@@ -14,29 +14,17 @@ let g:UltiSnipsExpandTrigger="<c-k>"
 let g:UltiSnipsJumpForwardTrigger="<c-k>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 1
-"let g:syntastic_check_on_wq = 0
-"let g:syntastic_javascript_checkers = ['jshint']
-"let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
-"let g:syntastic_mode_map = { "mode": "active", "passive_filetypes": ["go"] }
-
 " Completion engine
 "let g:ycm_collect_identifiers_from_comments_and_strings = 1
 "let g:ycm_complete_in_comments = 1
 let g:deoplete#enable_at_startup = 1
 
 let g:go_fmt_command = "goimports"
-let g:go_auto_type_info = 0
 let g:go_term_mode = "split"
-"let g:go_term_enabled = 1
 let g:go_list_type = 'quickfix'
 let g:go_build_tags = 'smoke slow'
-let g:go_def_mode = 'godef' "until guru becomes reasonable fast
+let g:go_def_mode = 'gopls' "until guru becomes reasonable fast
 
-"source ~/.vim/bundle/vim-pathogen/autoload/pathogen.vim
-"execute pathogen#infect()
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
   silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -72,6 +60,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'mbbill/undotree'
 call plug#end()
+
+call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
 
 syntax enable
 filetype plugin indent on
