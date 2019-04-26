@@ -23,7 +23,10 @@ let g:go_fmt_command = "goimports"
 let g:go_term_mode = "split"
 let g:go_list_type = 'quickfix'
 let g:go_build_tags = 'smoke slow'
-let g:go_def_mode = 'gopls' "until guru becomes reasonable fast
+let g:go_def_mode = 'guru' "until guru becomes reasonable fast
+
+let dart_style_guide = 2
+let dart_format_on_save = 1
 
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
   silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
@@ -39,6 +42,8 @@ Plug 'elixir-lang/vim-elixir'
 Plug 'vim-erlang/vim-erlang-omnicomplete'
 Plug 'herringtondarkholme/yats.vim'
 Plug 'w0rp/ale'
+Plug 'reisub0/hot-reload.vim'
+Plug 'dart-lang/dart-vim-plugin'
 " - edit
 Plug 'godlygeek/tabular'
 Plug 'andrewradev/splitjoin.vim'
